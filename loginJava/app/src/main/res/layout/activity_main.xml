@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:src="@drawable/clipart2553733"
+        android:id="@+id/GoogleImage"
+        android:layout_above="@+id/signIn"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/imagemagemage"
+        android:layout_below="@+id/buttonLogin"/>
+
+
+    <EditText
+        android:id="@+id/EmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:ems="10"
+        android:layout_centerInParent="true"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/TextPassword"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/EmailAddress"
+        android:layout_centerHorizontal="true"
+        android:hint="Password"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#2832C2"
+        android:layout_below="@+id/TextPassword"
+        android:text="Sign in" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in with your Google Account"
+        android:textSize="21sp"
+        android:layout_above="@+id/EmailAddress"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/signIn"/>
+</RelativeLayout>
