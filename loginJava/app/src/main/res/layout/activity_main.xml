@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="250dp"
         android:layout_height="150dp"
-        android:src="@drawable/clipart2553733"
+        android:src="@mipmap/ic_google_foreground"
         android:id="@+id/GoogleImage"
         android:layout_above="@+id/signIn"
         android:layout_centerHorizontal="true"/>

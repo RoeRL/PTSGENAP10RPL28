@@ -1,7 +1,9 @@
 package com.example.loginjava;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button buttonlogin = findViewById(R.id.buttonLogin);
-        getSupportActionBar().hide();
+        Button buttonlogin = findViewById(R.id.buttonLogin);//buat nyari id dari button yang kau taro di xml dan mendefinisikannya menjadi "buttonlogin"
+        getSupportActionBar().hide();//buat ngumpetin menu di atas halaman
 
-        buttonlogin.setOnClickListener(new View.OnClickListener() {
+        buttonlogin.setOnClickListener(new View.OnClickListener() {//yang akan di lahkukan ketika buttonlogin(penjelasan ada di Button buttonlogin =) di pencet
             public void onClick(View v) {
                 login();
             }
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         EditText passwordLogin = (EditText)findViewById(R.id.TextPassword);
 
         String emailVer = "bimo.17168@gmail.com";
-        String passwordVer = "yesplz123";
+        String passwordVer = "IniPassword123";
 
         String emailLog = emailLogin.getText().toString();
         String passwordLog = passwordLogin.getText().toString();
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (emailLog.equals(emailVer) && passwordLog.equals(passwordVer)) {
             Toast.makeText(this, "Anda Masuk", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, RecyclerView.class);
+            startActivity(intent);
+
 
             
         }else {
@@ -47,4 +52,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 }
